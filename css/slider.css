@@ -1,0 +1,286 @@
+.container {
+    width: 100%;
+    height: 37.777777rem;
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid rgba(0, 102, 102, .2);
+    border-right: 1px solid rgba(0, 102, 102, .2);
+}
+@media (max-width: 1280px) {
+    .container {
+        height: calc(23.66rem + (37.66 - 23.66) * ((100vw - 20rem) / (80 - 20)));
+    }
+}
+
+.handler {
+    width: 8%;
+    height: 30%;
+    position: absolute;
+    left: 0;
+    top: 28%;
+    z-index: 23;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+@media (max-width: 1280px) {
+    .handler {
+        width: calc(16% + (8 - 16) * ((100vw - 20rem) / (80 - 20)));
+    }
+}
+
+.handler span {
+    display: block;
+    height: 200px;
+    width: 50%;
+    background-color: rgba(0, 102, 102, .8);
+    transition: .4s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-top: 1px solid rgba(255, 255, 255, .6);
+    border-right: 1px solid rgba(255, 255, 255, .6);
+    border-bottom: 1px solid rgba(255, 255, 255, .6)
+}
+
+.handler span:hover {
+    width: 80%;
+}
+@media (max-width: 3700px) {
+    .handler span:hover {
+        width: 59%;
+    }
+}
+
+.handler .choosen {
+    width: 80%;
+}
+@media (max-width: 370px) {
+    .handler .choosen {
+        width: 59%;
+    }
+}
+
+.slide {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+    opacity: 0;
+    transition: .7s;
+}
+
+.slide-1 {
+    background-image: url("../images/slide7.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slide-2 {
+    background-image: url("../images/slide5.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slide-3 {
+    background-image: url("../images/slide6.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.show {
+    opacity: 1;
+    z-index: 22;
+}
+
+.slider-cap {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgba(0, 0, 0, 1.0);
+    /*background-color: rgba(255, 255, 255, .7);*/
+    padding: 2rem 1.33rem 0 2rem;
+}
+@media (max-width: 1280px) {
+    .slider-cap {
+        padding: calc(1rem + (2 - 1) * ((100vw - 20rem) / (80 - 20)))
+        calc(.66rem + (1.33 - .66) * ((100vw - 20rem) / (80 - 20)))
+        0
+        /*calc(.66rem + (1 - .66) * ((100vw - 20rem) / (80 - 20)))*/
+        calc(1rem + (2 - 1) * ((100vw - 20rem) / (80 - 20)));
+    }
+}
+
+.slider-cap-link {
+    text-align: right;
+    transform: translateY(-3rem);
+}
+@media (max-width: 1000px) {
+    .slider-cap-link {
+        transform: translateY(0);
+        margin-bottom: 1rem;
+        width: 95%;
+    }
+}
+
+.slider-cap-link a {
+    display: inline-block;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: .5s;
+    padding: 1rem 1.33rem .9rem 1.33rem;
+    background-color: rgba(0, 102, 102, 1);
+    color: white;
+    /*margin-bottom: .66rem;*/
+    margin-bottom: 0;
+    margin-left: .5rem;
+    position: relative;
+}
+
+@media (max-width: 1280px) {
+    .slider-cap-link a {
+        font-size: calc(.9rem + (1.1 - .9) * ((100vw - 20rem) / (80 - 20)));
+        padding: calc(.66rem + (1 - .66) * ((100vw - 20rem) / (80 - 20)))
+        calc(.8rem + (1.33 - .8) * ((100vw - 20rem) / (80 - 20)))
+        calc(.55rem + (.9 - .55) * ((100vw - 20rem) / (80 - 20)))
+        calc(.8rem + (1.33 - .8) * ((100vw - 20rem) / (80 - 20)));
+        /*margin-bottom: calc(.33rem + (.66 - .33) * ((100vw - 20rem) / (80 - 20)));*/
+    }
+}
+
+@media (max-width: 370px) {
+    .slider-cap-link a {
+        width: 95%;
+        text-align: center;
+        margin: .5rem auto 0 auto;
+    }
+}
+
+.slider-cap-link a:after {
+    position: absolute;
+    content: '';
+    transition: .6s;
+    height: 5%;
+    background-color: rgba(0, 255, 255, .4);
+    left: 0;
+    bottom: auto;
+    top: 0;
+    width: 100%;
+}
+
+.slider-cap-link a:hover {
+    color: rgba(0, 255, 255, .8);
+}
+
+.slider-cap-link a:hover:after {
+    width: 100%;
+    left: 0;
+    top: calc(95%);
+}
+
+.main-item-1 a:before,
+.main-item-2 a:before,
+.main-item-3 a:before,
+.main-item-4 a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 44px;
+    border: 2px solid rgba(0, 102, 102, .8);
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.main-item-1 a,
+.main-item-2 a,
+.main-item-3 a,
+.main-item-4 a {
+    padding: 16px 16px 24px 24px;
+    text-decoration: none;
+    position: relative;
+    color: rgba(0, 102, 102, 1);
+}
+
+.main-item-1 a:after,
+.main-item-2 a:after,
+.main-item-3 a:after,
+.main-item-4 a:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(240, 240, 240, 1.0);
+    height: 24px;
+    width: 80%;
+    z-index: -1;
+    transition: 0.4s linear;
+}
+
+.main-item-1 a:hover:before,
+.main-item-2 a:hover:before,
+.main-item-3 a:hover:before,
+.main-item-4 a:hover:before {
+    width: 100%;
+}
+
+.slider-cap h3 {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, .7);
+    padding: 1.66rem;
+    width: 60%;
+}
+@media (max-width: 1000px) {
+    .slider-cap h3 {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 1280px) {
+    .slider-cap h3 {
+        font-size: calc(1.2rem + (2 - 1.2) * ((100vw - 20rem) / (80 - 20)));
+        line-height: calc(1.3rem + (3 - 1.3) * ((100vw - 20rem) / (80 - 20)));
+        margin-bottom: calc(.33rem + (1 - .33) * ((100vw - 20rem) / (80 - 20)));
+        padding: calc(.66rem + (1.66 - .66) * ((100vw - 20rem) / (80 - 20)));
+    }
+}
+
+.slider-cap h3 span {
+    color: rgba(0, 102, 102, 1.0);
+}
+
+.slider-cap p {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: rgba(0, 40, 40, 1.0);
+    width: 60%;
+    background-color: rgba(255, 255, 255, .7);
+    padding: 1.66rem;
+}
+@media (max-width: 1000px) {
+    .slider-cap p {
+        width: 90%;
+        margin: 0 auto 1rem auto;
+    }
+}
+@media (max-width: 370px) {
+    .slider-cap p {
+        margin-bottom: .33rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .slider-cap p {
+        font-size: calc(.9rem + (1.2 - .9) * ((100vw - 20rem) / (80 - 20)));
+        line-height: calc(1rem + (1.5 - 1) * ((100vw - 20rem) / (80 - 20)));
+        padding: calc(.66rem + (1.66 - .66) * ((100vw - 20rem) / (80 - 20)));
+    }
+}

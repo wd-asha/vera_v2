@@ -1,0 +1,148 @@
+.contacts {
+    width: 100%;
+    padding: 4rem 0 1rem 0;
+}
+@media (max-width: 1280px) {
+    .contacts {
+        padding: calc(1rem + (4 - 1) * ((100vw - 20rem) / (80 - 20)))
+        0
+        calc(.66rem + (1 - .66) * ((100vw - 20rem) / (80 - 20)))
+        0;
+    }
+}
+
+.contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.contacts__item {
+    width: 100%;
+    margin-bottom: 3rem;
+    box-shadow: 1px 1px 1px rgba(0, 60, 60, .3);
+    padding-bottom: 1rem;
+}
+@media (max-width: 1280px) {
+    .contacts__item {
+        margin-bottom: calc(1rem + (3 - 1) * ((100vw - 20rem) / (80 - 20)));
+        padding-bottom: calc(0rem + (1 - 0) * ((100vw - 20rem) / (80 - 20)));
+    }
+}
+
+.contacts__text {
+    padding: 1.33rem 2rem 1rem 2rem;
+}
+@media (max-width: 1280px) {
+    .contacts__text {
+        padding: calc(.33rem + (1.33 - .33) * ((100vw - 20rem) / (80 - 20)))
+        calc(1rem + (2 - 1) * ((100vw - 20rem) / (80 - 20)))
+        calc(.33rem + (1 - .33) * ((100vw - 20rem) / (80 - 20)))
+        calc(1rem + (2 - 1) * ((100vw - 20rem) / (80 - 20)));
+    }
+}
+
+.contacts__text p {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    color: rgba(0, 60, 60, 1);
+    margin-bottom: .5rem;
+}
+@media (max-width: 1280px) {
+    .contacts__text p {
+        font-size: calc(.9rem + (1.2 - .9) * ((100vw - 20rem) / (80 - 20)));
+        line-height: calc(1.2rem + (1.4 - 1.2) * ((100vw - 20rem) / (80 - 20)));
+    }
+}
+
+.contacts__text a {
+    display: inline-block;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: .5s;
+    padding: 1rem 1.33rem .9rem 1.33rem;
+    background-color: rgba(0, 102, 102, .8);
+    color: white;
+    margin-bottom: .66rem;
+    margin-right: .5rem;
+    margin-top: .33rem;
+    position: relative;
+}
+@media (max-width: 1280px) {
+    .contacts__text a {
+        font-size: calc(.9rem + (1.1 - .9) * ((100vw - 20rem) / (80 - 20)));
+        padding: calc(.66rem + (1 - .66) * ((100vw - 20rem) / (80 - 20)))
+        calc(.8rem + (1.33 - .8) * ((100vw - 20rem) / (80 - 20)))
+        calc(.55rem + (.9 - .55) * ((100vw - 20rem) / (80 - 20)))
+        calc(.8rem + (1.33 - .8) * ((100vw - 20rem) / (80 - 20)));
+        margin-bottom: calc(.33rem + (.66 - .33) * ((100vw - 20rem) / (80 - 20)));
+    }
+}
+@media (max-width: 344px) {
+    .contacts__text a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.contacts__text a:after {
+    position: absolute;
+    content: '';
+    transition: .6s;
+    height: 5%;
+    background-color: rgba(0, 255, 255, .4);
+    left: 0;
+    bottom: auto;
+    top: 0;
+    width: 100%;
+}
+
+.contacts__text a:hover {
+    color: rgba(0, 255, 255, .8);
+}
+
+.contacts__text a:hover:after {
+    width: 100%;
+    left: 0;
+    top: calc(95%);
+}
+
+.contacts-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contacts-form__left {
+    width: 33%;
+}
+.contacts-form__right {
+    width: 64%;
+}
+
+.contacts-form input,
+.contacts-form textarea {
+    width: 100%;
+    font-family: 'Adobe Clean Reg', sans-serif;
+    font-size: 1rem;
+    padding: .5rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .2);
+    color: rgba(0, 60, 60, 1);
+    margin-bottom: 1.33rem;
+}
+@media (max-width: 1280px) {
+    .contacts-form input,
+    .contacts-form textarea {
+        font-size: calc(.8rem + (1 - .8) * ((100vw - 20rem) / (80 - 20)));
+        padding: calc(.33rem + (.5 - .33) * ((100vw - 20rem) / (80 - 20)));
+        margin-bottom: calc(.7rem + (1.33 - .7) * ((100vw - 20rem) / (80 - 20)));
+    }
+}
+
+.contacts-form textarea {
+
+}

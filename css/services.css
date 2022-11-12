@@ -1,0 +1,115 @@
+.services {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+.service {
+    width: 33.33%;
+    padding: 2.66rem 2.66rem 2rem 2.66rem;
+    border-left: 1px solid rgba(255, 255, 255, .66);
+    border-right: 1px solid rgba(255, 255, 255, .66);
+}
+@media (max-width: 900px) {
+    .service {
+        width: 100%;
+        padding: calc(1.66rem + (2.66 - 1.66) * ((100vw - 20rem) / (80 - 20)))
+        calc(1.66rem + (2.66 - 1.66) * ((100vw - 20rem) / (80 - 20)))
+        calc(1rem + (2 - 1) * ((100vw - 20rem) / (80 - 20)))
+        calc(1.66rem + (2.66 - 1.66) * ((100vw - 20rem) / (80 - 20)));
+    }
+}
+
+.service h3 {
+    color: rgba(255, 255, 255, 1.0);
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+@media (max-width: 1280px) {
+    .service h3 {
+        font-size: calc(1rem + (1.3 - 1) * ((100vw - 20rem) / (80 - 20)));
+        padding-bottom: calc(.5rem + (1 - .5) * ((100vw - 20rem) / (80 - 20)));
+    }
+}
+
+.service a {
+    color: rgba(255, 255, 255, .8);
+    text-decoration: none;
+    position: relative;
+    cursor: default;
+}
+
+.service a p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+}
+@media (max-width: 1280px) {
+    .service a p {
+        font-size: calc(.9rem + (1.1 - .9) * ((100vw - 20rem) / (80 - 20)));
+        line-height: calc(1.1rem + (1.5 - 1.1) * ((100vw - 20rem) / (80 - 20)));
+        padding-bottom: calc(.4rem + (1 - .4) * ((100vw - 20rem) / (80 - 20)));
+    }
+}
+
+.service a p:nth-of-type(1) {
+    padding-top: 1.66rem;
+}
+@media (max-width: 1280px) {
+    .service a p:nth-of-type(1) {
+        padding-top: calc(1rem + (1.66 - 1) * ((100vw - 20rem) / (80 - 20)))
+    }
+}
+
+.service a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.service a.effect-4 {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.service-0 {
+    width: 100%;
+    background-color: rgba(0, 60, 60, .8);
+    color: white;
+}
+
+.service-0 .effect-4 p {
+    padding: .66rem 0;
+}
+@media (max-width: 1280px) {
+    .service-0 .effect-4 p {
+        padding: calc(.25rem + (.66 - .25) * ((100vw - 20rem) / (80 - 20))) 0;
+    }
+}
+
+.service-1 {
+    background-color: rgba(0, 60, 60, 1.0);
+}
+
+.service-2 {
+    background-color: rgba(0, 60, 60, .9);
+}
+
+.service-3 {
+    background-color: rgba(0, 60, 60, .8);
+}
+
+.service-4 {
+    background-color: rgba(0, 60, 60, .7);
+}
+
+.service img {
+    width: 1rem;
+    opacity: .7;
+}

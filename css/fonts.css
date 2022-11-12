@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Adobe Clean It';
+    src: url('../fonts/AdobeClean/AdobeClean-It.eot');
+    src: local('Adobe Clean Italic'), local('AdobeClean-It'),
+    url('../fonts/AdobeClean/AdobeClean-It.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AdobeClean/AdobeClean-It.woff') format('woff'),
+    url('../fonts/AdobeClean/AdobeClean-It.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Adobe Clean Reg';
+    src: url('../fonts/AdobeClean/AdobeClean-Reg.eot');
+    src: local('Adobe Clean Reg'), local('AdobeClean-Reg'),
+    url('../fonts/AdobeClean/AdobeClean-Reg.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AdobeClean/AdobeClean-Reg.woff') format('woff'),
+    url('../fonts/AdobeClean/AdobeClean-Reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
